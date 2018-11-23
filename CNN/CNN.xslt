@@ -25,13 +25,12 @@
 		<xsl:variable name="duration" select="@duration"/>
 		<strong>
 			<xsl:value-of select="$name"/>
-		
-		<xsl:if test="substring($duration,5,1) = 'M'">
-			(<xsl:value-of select="substring($duration,3,9)"/>)
-		</xsl:if>
-		<xsl:if test="substring($duration,5,1) = 'S'">
-			(<xsl:value-of select="substring($duration,3,6)"/>)
-		</xsl:if>
+			<xsl:if test="substring($duration,5,1) = 'M'">
+				<xsl:value-of select="concat('(',substring($duration,3,9),')')"/>
+			</xsl:if>
+			<xsl:if test="substring($duration,5,1) = 'S'">
+				<xsl:value-of select="concat('(',substring($duration,3,6),')')"/>
+			</xsl:if>
 		</strong>
 		<ol>
 			<xsl:apply-templates select="$lev1"/>
@@ -45,12 +44,12 @@
 			<li>
 				<strong>
 					<xsl:value-of select="$name"/>
-				<xsl:if test="substring($duration,5,1) = 'M'">
-					(<xsl:value-of select="substring($duration,3,9)"/>)
-				</xsl:if>
-				<xsl:if test="substring($duration,5,1) = 'S'">
-					(<xsl:value-of select="substring($duration,3,6)"/>)
-				</xsl:if>
+					<xsl:if test="substring($duration,5,1) = 'M'">
+						<xsl:value-of select="concat('(',substring($duration,3,9),')')"/>
+					</xsl:if>
+					<xsl:if test="substring($duration,5,1) = 'S'">
+						<xsl:value-of select="concat('(',substring($duration,3,6),')')"/>
+					</xsl:if>
 				</strong>
 				<xsl:if test="$lev2/mpeg7:Name !=''">
 					<ol>
@@ -68,13 +67,12 @@
 			<li>
 				<strong>
 					<xsl:value-of select="$name"/>
-				
-				<xsl:if test="substring($duration,5,1) = 'M'">
-					(<xsl:value-of select="substring($duration,3,9)"/>)
-				</xsl:if>
-				<xsl:if test="substring($duration,5,1) = 'S'">
-					(<xsl:value-of select="substring($duration,3,6)"/>)
-				</xsl:if>
+					<xsl:if test="substring($duration,5,1) = 'M'">
+						<xsl:value-of select="concat('(',substring($duration,3,9),')')"/>
+					</xsl:if>
+					<xsl:if test="substring($duration,5,1) = 'S'">
+						<xsl:value-of select="concat('(',substring($duration,3,6),')')"/>
+					</xsl:if>
 				</strong>
 				<xsl:if test="$lev3/mpeg7:Name != ''">
 					<ol>
@@ -91,13 +89,12 @@
 			<li>
 				<strong>
 					<xsl:value-of select="$name"/>
-				
-				<xsl:if test="substring($duration,5,1) = 'M'">
-					(<xsl:value-of select="substring($duration,3,9)"/>)
-				</xsl:if>
-				<xsl:if test="substring($duration,5,1) = 'S'">
-					(<xsl:value-of select="substring($duration,3,6)"/>)
-				</xsl:if>
+					<xsl:if test="substring($duration,5,1) = 'M'">
+						<xsl:value-of select="concat('(',substring($duration,3,9),')')"/>
+					</xsl:if>
+					<xsl:if test="substring($duration,5,1) = 'S'">
+						<xsl:value-of select="concat('(',substring($duration,3,6),')')"/>
+					</xsl:if>
 				</strong>
 			</li>
 		</xsl:if>
