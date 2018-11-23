@@ -2,6 +2,7 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mpeg7="urn:mpeg:mpeg7:schema:2004">
 	<xsl:output method="html" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
+	<xsl:variable name="lev0" select="mpeg7:Mpeg7/mpeg7:Description/mpeg7:Summarization/mpeg7:Summary/mpeg7:SummarySegmentGroup"/>
 		<html>
 			<body>
 				<style type="text/css">
@@ -13,7 +14,7 @@
 				<hr/>
 				<ol>
 					<li>
-						<xsl:apply-templates select="mpeg7:Mpeg7/mpeg7:Description/mpeg7:Summarization/mpeg7:Summary/mpeg7:SummarySegmentGroup"/>
+						<xsl:apply-templates select="$lev0"/>
 					</li>
 				</ol>
 			</body>
