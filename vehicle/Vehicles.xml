@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vehicles xmlns="urn:kmu:cs:3:shyang" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:kmu:cs:3:shyang file:///D:/xml/vehicle/vehicle.xsd">
+	<Vehicle>
+		<Body>Sonata body</Body>
+		<DriveTrain>
+			<Engine>Sonata Engine</Engine>
+			<Transmission>Sonata Trains</Transmission>
+		</DriveTrain>
+	</Vehicle>
+	<Vehicle xsi:type="AutomobileType">
+		<Body>AutomobileBody</Body>
+		<DriveTrain>
+			<Engine>AutomobileEngine</Engine>
+			<Transmission>AutomobileTransmission</Transmission>
+		</DriveTrain>
+		<Trunk></Trunk>
+	</Vehicle>
+	<Vehicle xsi:type="SedanType">
+		<Body>SedanBody</Body>
+		<DriveTrain>
+			<Engine>SedanEngine</Engine>
+			<Transmission>SedanTransmission</Transmission>
+		</DriveTrain>
+		<Trunk>SedanTrunk</Trunk>
+	</Vehicle>
+	<Vehicle xsi:type="ConvertibleType">
+		<Body>ConvertibleBody</Body>
+		<DriveTrain>
+			<Engine>ConvertibleEngine</Engine>
+			<Transmission>ConvertibleTransmission</Transmission>
+		</DriveTrain>
+		<Trunk>ConvertibleTrunk</Trunk>
+		<OperatingRoof>ConvertibleOperatingRoof</OperatingRoof>
+	</Vehicle>
+	<Vehicle xsi:type="TruckType">
+		<Body>TruckBody</Body>
+		<DriveTrain>
+			<Engine>TruckEngine</Engine>
+			<Transmission>TruckTransmission</Transmission>
+		</DriveTrain>
+		<Compartment>TruckCompartment</Compartment>
+	</Vehicle>
+</Vehicles>
